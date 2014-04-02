@@ -1,7 +1,24 @@
 @SampleApp.module "HeaderApp.List", (List, App, Backbone, Marionette, $, _) ->
+	
+	class List.Header extends App.Views.ItemView
+    template: 'header/list/item'
+    tagName: 'li'
 
-  class List.Layout extends App.Views.Layout
-    template: "header/list/list_layout"
+    events:
+      "click a": "navigate"
 
-    regions:
-      fooRegion: "#foo-region"
+    navigate: (e) ->
+      e.preventDefault()
+      @trigger "header:item:clicked", @model
+
+  class List.Headers extends App.Views.CompositeView
+    template: 'header/list/list'
+    tagName: 'nav'
+    className: 'navbar navbar-default navbar-fixed-top'
+    attributes: ->
+      'role':'navigation'
+    itemView: List.Header
+    itemViewContainer: 'ul'
+
+  
+

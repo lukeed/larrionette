@@ -7,9 +7,9 @@
     App.csrfToken = $("meta[name='token']").attr('content')
 
   App.addRegions
-    headerRegion: "header"
-    mainRegion: "#main-content"
-    footerRegion: "footer"
+    headerRegion: "header#header"
+    mainRegion: "main#content"
+    footerRegion: "footer#footer"
     dialogRegion: Marionette.Region.Dialog.extend(el: "#dialog")
 
   App.addInitializer ->

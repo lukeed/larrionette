@@ -36,6 +36,7 @@ module.exports = (grunt) ->
           'app/assets/vendor/components/underscore/**/*.js'
           'app/assets/vendor/components/backbone/**/*.js'
           'app/assets/vendor/components/backbone.marionette/**/*.js'
+          'app/assets/vendor/components/backbone.picky/**/*.js'
           'app/assets/vendor/components/spin.js/*.js'
           'app/assets/vendor/templates.js'
         ]

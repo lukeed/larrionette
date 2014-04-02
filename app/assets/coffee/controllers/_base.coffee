@@ -13,6 +13,7 @@
       delete @options
       super args
       App.execute "unregister:instance", @, @_instance_id
+      # console.log "closing controller #{@_instance_id}"
 
     show: (view, options = {}) ->
       _.defaults options,

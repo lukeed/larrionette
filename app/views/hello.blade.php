@@ -5,12 +5,18 @@
     <title>Sample App</title>
     <meta name="env" content="{{ App::environment() }}">
     <meta name="token" content="{{ Session::token() }}">
+    {{ HTML::style('css/frontend.css') }}
+    <style>
+      main { margin-top: 55px; }
+    </style>
 </head>
 <body>
-
+  <!-- <div id="nav"></div>
   <header></header>
-  <div id="main-content"></div>
-  <footer></footer>
+  <div id="main-content"></div> -->
+  <header id="header" role="banner"></header>
+  <main id="content" role="main"></main>
+  <footer id="footer" role="contentinfo"></footer>
 
   <!-- Dialog Region -->
   <div id="dialog" class="modal hide" tabindex="-1" data-replace="true"></div>
